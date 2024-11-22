@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Bella - Produtos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fce4ec;
+            color: #4a4a4a;
+        }
+        header {
+            background-color: #d81b60;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        nav {
+            background-color: #c2185b;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .product {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin-top: 15px;
+        }
+        .product p {
+            color: #f44336;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #d81b60;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Maria Bella</h1>
+        <p>Sua loja de maquiagem com os melhores produtos!</p>
+    </header>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <section>
+        <h2>Nossos Produtos</h2>
+        <p>Confira nossa seleção de produtos de maquiagem para realçar sua beleza.</p>
+        <div class="products">
+            <div class="product">
+                <img src="img/base.png" alt="Base Líquida">
+                <h3>Base Líquida</h3>
+                <p>Base de alta cobertura, ideal para todos os tipos de pele.</p>
+                <p><strong>R$ 59,90</strong></p>
+            </div>
+            <div class="product">
+                <img src="img/sombra.png" alt="Paleta de Sombras">
+                <h3>Paleta de Sombras</h3>
+                <p>16 cores vibrantes e duradouras para todos os looks.</p>
+                <p><strong>R$ 99,90</strong></p>
+            </div>
+            <div class="product">
+                <img src="img/batom.png" alt="Batom Matte">
+                <h3>Batom Matte</h3>
+                <p>Acabamento matte perfeito e confortável o dia todo.</p>
+                <p><strong>R$ 39,90</strong></p>
+            </div>
+            <div class="product">
+                <img src="img/cilios.png" alt="Máscara de Cílios">
+                <h3>Máscara de Cílios</h3>
+                <p>Volume e definição intensa para seus cílios.</p>
+                <p><strong>R$ 49,90</strong></p>
+            </div>
+            <div class="product">
+                <img src="img/iluminador.png" alt="Iluminador">
+                <h3>Iluminador</h3>
+                <p>Iluminação radiante e natural para sua pele.</p>
+                <p><strong>R$ 59,90</strong></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Realce sua beleza, brilhe com confiança</p>
+    </footer>
+</body>
+</html>

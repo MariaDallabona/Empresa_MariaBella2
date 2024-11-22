@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Bella - Contato</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fce4ec;
+            color: #4a4a4a;
+        }
+        header {
+            background-color: #d81b60;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        nav {
+            background-color: #c2185b;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #d81b60;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            background-color: #d81b60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #c2185b;
+        }
+        .contact-info {
+            margin-top: 30px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Maria Bella</h1>
+        <p>Aqui realçamos sua beleza com qualidade e carinho!</p>
+    </header>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <section>
+        <h2>Fale Conosco</h2>
+        <p>Preencha o formulário abaixo para entrar em contato com a nossa equipe. Responderemos o mais rápido possível!</p>
+        
+        <!-
+        <form action="https://formsubmit.co/maria_e_dallabona@estudante.sesisenai.org.br" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Assunto:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+            <input type="hidden" name="accessKey" value="042be0d3-84fa-4ae8-aaed-2434cda72cac">
+        </form>
+
+        <div class="contact-info">
+            <h3>Outras formas de contato:</h3>
+            <p><strong>Telefone:</strong> (47) 1234-5678</p>
+            <p><strong>E-mail:</strong> contato@mariabella.com.br</p>
+            <p><strong>Endereço:</strong> Rua Santiago, 100, Timbó, SC</p>
+           
+        </div>
+    </section>
+    <footer>
+        <p>Realce sua beleza, brilhe com confiança</p>
+    </footer>
+
+    <script>
+        // 
+        emailjs.init("YOUR_USER_ID");
+
+        // 
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+
+            var templateParams = {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            };
+
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+                .then(function(response) {
+                    alert("Mensagem enviada com sucesso!");
+                    document.getElementById("contact-form").reset();
+                }, function(error) {
+                    alert("Falha ao enviar mensagem. Tente novamente.");
+                });
+        });
+    </script>
+</body>
+</html>
